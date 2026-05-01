@@ -5,88 +5,131 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tivannah Innovations Youth Organization</title>
 <style>
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#f5f5f5;
-color:#222;
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Arial,sans-serif;background:#f4f4f4;color:#222;}
+nav{
+background:#111;
+padding:15px;
+position:sticky;
+top:0;
+z-index:1000;
 }
-header{
-background:linear-gradient(90deg, green, orange, gold, blue);
+nav ul{
+display:flex;
+justify-content:center;
+list-style:none;
+flex-wrap:wrap;
+}
+nav ul li{
+margin:10px;
+}
+nav ul li a{
 color:white;
-padding:40px 20px;
+text-decoration:none;
+font-weight:bold;
+}
+nav ul li a:hover{color:orange;}
+header{
+background:linear-gradient(90deg,green,orange,gold,blue);
+color:white;
 text-align:center;
+padding:80px 20px;
 }
-header h1{
-margin:0;
-font-size:34px;
-}
-header p{
-font-size:18px;
-margin-top:10px;
-}
+header h1{font-size:40px;}
+header p{font-size:18px;margin-top:15px;}
 section{
-padding:30px 20px;
-max-width:1000px;
+padding:60px 20px;
+max-width:1100px;
 margin:auto;
 }
 .card{
 background:white;
-padding:20px;
-margin:15px 0;
+padding:25px;
+margin-top:20px;
 border-radius:10px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
+box-shadow:0 3px 8px rgba(0,0,0,0.1);
 }
-h2{
-color:green;
+h2{color:green;margin-bottom:15px;}
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+}
+.gallery div{
+background:#ddd;
+height:180px;
+border-radius:10px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
 }
 footer{
 background:#111;
 color:white;
 text-align:center;
-padding:20px;
-margin-top:30px;
+padding:25px;
+margin-top:40px;
 }
-.btn{
-display:inline-block;
-padding:12px 20px;
-background:orange;
-color:white;
-text-decoration:none;
-border-radius:6px;
-margin-top:10px;
+html{
+scroll-behavior:smooth;
 }
 </style>
 </head>
 <body>
 
-<header>
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About Us</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#events">Events</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<header id="home">
 <h1>Tivannah Innovations Youth Organization</h1>
 <p>Empowering Youth Through Film, Innovation & Awareness</p>
-<a href="#contact" class="btn">Contact Us</a>
 </header>
 
-<section>
+<section id="about">
 <div class="card">
 <h2>About Us</h2>
-<p>We are a youth organization based in Choma, Southern Province, Zambia. We create movies, short films and raise awareness on drug abuse, gender based violence and community development.</p>
+<p>We are based in Choma, Southern Province, Zambia. We produce movies, short films and raise awareness on drug abuse, gender based violence and youth empowerment.</p>
 </div>
+</section>
 
+<section id="projects">
 <div class="card">
-<h2>What We Do</h2>
+<h2>Our Projects</h2>
 <p>🎬 Movie Production</p>
 <p>📽 Short Films</p>
-<p>📢 Drug Abuse Awareness</p>
-<p>🛡 Gender Based Violence Campaigns</p>
-<p>🌍 Youth Empowerment Programs</p>
+<p>📢 Awareness Campaigns</p>
+<p>🌍 Community Outreach</p>
 </div>
+</section>
 
+<section id="events">
 <div class="card">
 <h2>Events</h2>
-<p>Upcoming events will be posted here soon.</p>
+<p>Upcoming screenings, workshops and youth campaigns will be posted here.</p>
 </div>
+</section>
 
-<div class="card" id="contact">
+<section id="gallery">
+<h2>Gallery</h2>
+<div class="gallery">
+<div>Add Photo</div>
+<div>Add Photo</div>
+<div>Add Photo</div>
+<div>Add Photo</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="card">
 <h2>Contact Us</h2>
 <p>📞 0971453747</p>
 <p>✉ timyc095@gmail.com</p>
