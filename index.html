@@ -4,142 +4,265 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tivannah Innovations Youth Organization</title>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:Arial,sans-serif;background:#f4f4f4;color:#222;}
-nav{
-background:#111;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial, sans-serif;
+background:#f8f8f8;
+color:#222;
+}
+
+header{
+background:linear-gradient(90deg,green,gold,orange,blue);
 padding:15px;
 position:sticky;
 top:0;
 z-index:1000;
 }
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+nav h2{
+color:white;
+font-size:22px;
+}
+
 nav ul{
 display:flex;
-justify-content:center;
 list-style:none;
 flex-wrap:wrap;
 }
+
 nav ul li{
 margin:10px;
 }
+
 nav ul li a{
 color:white;
 text-decoration:none;
 font-weight:bold;
 }
-nav ul li a:hover{color:orange;}
-header{
-background:linear-gradient(90deg,green,orange,gold,blue);
-color:white;
+
+.hero{
+background:url('photo1.jpg') center/cover;
+height:90vh;
+display:flex;
+justify-content:center;
+align-items:center;
 text-align:center;
-padding:80px 20px;
+color:white;
+padding:20px;
 }
-header h1{font-size:40px;}
-header p{font-size:18px;margin-top:15px;}
+
+.hero .box{
+background:rgba(0,0,0,0.6);
+padding:30px;
+border-radius:10px;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:20px;
+}
+
 section{
 padding:60px 20px;
 max-width:1100px;
 margin:auto;
 }
+
+h2{
+text-align:center;
+margin-bottom:25px;
+color:green;
+font-size:32px;
+}
+
+.about p{
+font-size:18px;
+line-height:1.8;
+text-align:center;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
 .card{
 background:white;
 padding:25px;
-margin-top:20px;
 border-radius:10px;
-box-shadow:0 3px 8px rgba(0,0,0,0.1);
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+text-align:center;
 }
-h2{color:green;margin-bottom:15px;}
+
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:15px;
 }
-.gallery div{
-background:#ddd;
-height:180px;
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
 border-radius:10px;
-display:flex;
-align-items:center;
-justify-content:center;
-font-weight:bold;
 }
+
+.founder{
+text-align:center;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact{
+text-align:center;
+}
+
 footer{
 background:#111;
 color:white;
 text-align:center;
-padding:25px;
+padding:20px;
 margin-top:40px;
 }
-html{
-scroll-behavior:smooth;
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:30px;
+}
+
+nav{
+flex-direction:column;
+}
+
+nav ul{
+justify-content:center;
+}
+
 }
 </style>
 </head>
+
 <body>
 
+<header>
 <nav>
+<h2>TIMYC</h2>
 <ul>
 <li><a href="#home">Home</a></li>
-<li><a href="#about">About Us</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#events">Events</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#mission">Mission</a></li>
 <li><a href="#gallery">Gallery</a></li>
+<li><a href="#founder">Founder</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
-
-<header id="home">
-<h1>Tivannah Innovations Youth Organization</h1>
-<p>Empowering Youth Through Film, Innovation & Awareness</p>
 </header>
 
-<section id="about">
-<div class="card">
+<section class="hero" id="home">
+<div class="box">
+<h1>Tivannah Innovations Youth Organization</h1>
+<p>Inspire • Innovate • Impact</p>
+</div>
+</section>
+
+<section id="about" class="about">
 <h2>About Us</h2>
-<p>We are based in Choma, Southern Province, Zambia. We produce movies, short films and raise awareness on drug abuse, gender based violence and youth empowerment.</p>
-</div>
+<p>
+Tivannah Innovations Youth Organization is a youth-led movement dedicated to empowering young people through creativity, innovation, film production, leadership and community development. Since 2022, the organization has been actively raising awareness on drug abuse, gender-based violence, arts development and youth empowerment across Zambia.
+</p>
 </section>
 
-<section id="projects">
-<div class="card">
-<h2>Our Projects</h2>
-<p>🎬 Movie Production</p>
-<p>📽 Short Films</p>
-<p>📢 Awareness Campaigns</p>
-<p>🌍 Community Outreach</p>
-</div>
-</section>
+<section id="mission">
+<h2>What We Do</h2>
+<div class="cards">
 
-<section id="events">
 <div class="card">
-<h2>Events</h2>
-<p>Upcoming screenings, workshops and youth campaigns will be posted here.</p>
+<h3>Film Production</h3>
+<p>We create movies, short films and visual stories that inspire society.</p>
+</div>
+
+<div class="card">
+<h3>Awareness Campaigns</h3>
+<p>We educate communities on drug abuse, GBV and social issues.</p>
+</div>
+
+<div class="card">
+<h3>Youth Empowerment</h3>
+<p>We build leadership, talent and innovation among young people.</p>
+</div>
+
 </div>
 </section>
 
 <section id="gallery">
-<h2>Gallery</h2>
+<h2>Our Events Gallery</h2>
 <div class="gallery">
-<div>Add Photo</div>
-<div>Add Photo</div>
-<div>Add Photo</div>
-<div>Add Photo</div>
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+<img src="photo5.jpg">
+<img src="photo6.jpg">
 </div>
 </section>
 
-<section id="contact">
-<div class="card">
-<h2>Contact Us</h2>
-<p>📞 0971453747</p>
-<p>✉ timyc095@gmail.com</p>
-<p>📍 Choma, Southern Province, Zambia</p>
+<section id="founder">
+<h2>Founder / CEO</h2>
+<div class="founder">
+<h3>KABIKA SIASABUZINGO MUBITA</h3>
+<p>Founder and visionary leader of Tivannah Innovations Youth Organization, driving youth innovation, creativity and positive social impact.</p>
 </div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact Us</h2>
+<p>Phone: 0971453747</p>
+<p>Email: timyc095@gmail.com</p>
+<p>Location: Choma, Southern Province, Zambia</p>
+<p>Registered with National Youth Development Council & National Arts Council</p>
 </section>
 
 <footer>
-© 2026 Tivannah Innovations Youth Organization
+© 2026 Tivannah Innovations Youth Organization | All Rights Reserved
 </footer>
+
+<a class="whatsapp" href="https://wa.me/260971453747">WhatsApp</a>
 
 </body>
 </html>
