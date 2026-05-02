@@ -795,15 +795,16 @@ moveSlide(1);
 </section>
 
 <!-- GALLERY -->
+<!-- GALLERY -->
 <section id="gallery">
 
 <h2>Our Gallery</h2>
 
-<div class="gallery-slider">
+<div class="gallery-container">
 
-<button class="nav prev" onclick="moveSlide(-1)">❮</button>
+<button class="nav-btn prev" onclick="moveSlide(-1)">❮</button>
 
-<div class="slides" id="slides">
+<div class="gallery-track" id="galleryTrack">
 
 <img src="photo02.jpg">
 <img src="photo03.jpg">
@@ -813,11 +814,87 @@ moveSlide(1);
 
 </div>
 
-<button class="nav next" onclick="moveSlide(1)">❯</button>
+<button class="nav-btn next" onclick="moveSlide(1)">❯</button>
 
 </div>
 
 </section>
+
+<style>
+.gallery-container{
+position:relative;
+width:100%;
+overflow:hidden;
+border-radius:15px;
+margin-top:20px;
+}
+
+.gallery-track{
+display:flex;
+transition:0.6s ease;
+}
+
+.gallery-track img{
+width:100%;
+height:420px;
+object-fit:contain;
+background:#111;
+flex:1 0 100%;
+}
+
+.nav-btn{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,0.6);
+color:#fff;
+border:none;
+font-size:30px;
+padding:10px 16px;
+cursor:pointer;
+z-index:5;
+border-radius:8px;
+}
+
+.prev{
+left:10px;
+}
+
+.next{
+right:10px;
+}
+
+.nav-btn:hover{
+background:#25D366;
+}
+</style>
+
+<script>
+let currentSlide = 0;
+const galleryTrack = document.getElementById("galleryTrack");
+const totalSlides = galleryTrack.children.length;
+
+function showSlide(index){
+if(index >= totalSlides){
+currentSlide = 0;
+}else if(index < 0){
+currentSlide = totalSlides - 1;
+}else{
+currentSlide = index;
+}
+
+galleryTrack.style.transform =
+"translateX(-" + (currentSlide * 100) + "%)";
+}
+
+function moveSlide(step){
+showSlide(currentSlide + step);
+}
+
+setInterval(function(){
+moveSlide(1);
+},4000);
+</script>
 </div>
 
 <section id="team">
