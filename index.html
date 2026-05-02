@@ -804,8 +804,6 @@ document.getElementById("supportPopup").style.display="none";
 }
   
 </section>
-
-<!-- GALLERY -->
 <!-- GALLERY -->
 <section id="gallery">
 
@@ -830,22 +828,20 @@ document.getElementById("supportPopup").style.display="none";
 </div>
 
 </section>
+
 <script>
 let currentSlide = 0;
 
 function moveSlide(step){
 const track = document.getElementById("galleryTrack");
+if(!track) return;
+
 const slides = track.children.length;
 
 currentSlide += step;
 
-if(currentSlide >= slides){
-currentSlide = 0;
-}
-
-if(currentSlide < 0){
-currentSlide = slides - 1;
-}
+if(currentSlide >= slides) currentSlide = 0;
+if(currentSlide < 0) currentSlide = slides - 1;
 
 track.style.transform =
 "translateX(-" + (currentSlide * 100) + "%)";
@@ -855,8 +851,6 @@ setInterval(function(){
 moveSlide(1);
 },4000);
 </script>
-
-<section id="team">
 
 <h2>Leadership Team</h2>
 
