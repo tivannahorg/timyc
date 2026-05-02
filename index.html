@@ -802,34 +802,6 @@ document.getElementById("supportPopup").style.display="block";
 function closeSupport(){
 document.getElementById("supportPopup").style.display="none";
 }
-
-/* Gallery Slider */
-let currentSlide = 0;
-const galleryTrack = document.getElementById("galleryTrack");
-const totalSlides = galleryTrack.children.length;
-
-function showSlide(index){
-if(index >= totalSlides){
-currentSlide = 0;
-}else if(index < 0){
-currentSlide = totalSlides - 1;
-}else{
-currentSlide = index;
-}
-
-galleryTrack.style.transform =
-"translateX(-" + (currentSlide * 100) + "%)";
-}
-
-function moveSlide(step){
-showSlide(currentSlide + step);
-}
-
-/* Auto slide every 4 sec */
-setInterval(function(){
-moveSlide(1);
-},4000);
-          </script>
   
 </section>
 
@@ -858,7 +830,6 @@ moveSlide(1);
 </div>
 
 </section>
-
 <script>
 let currentSlide = 0;
 
@@ -1058,28 +1029,32 @@ updateCounter();
   </footer>
   <script>
 let currentSlide = 0;
-const galleryTrack = document.getElementById("galleryTrack");
 
 function moveSlide(step){
-    const slides = galleryTrack.querySelectorAll("img");
-    const totalSlides = slides.length;
 
-    currentSlide += step;
+const track = document.getElementById("galleryTrack");
 
-    if(currentSlide >= totalSlides){
-        currentSlide = 0;
-    }
+if (!track) return;
 
-    if(currentSlide < 0){
-        currentSlide = totalSlides - 1;
-    }
+const slides = track.querySelectorAll("img");
+const totalSlides = slides.length;
 
-    galleryTrack.style.transform =
-    "translateX(-" + (currentSlide * 100) + "%)";
+currentSlide = currentSlide + step;
+
+if(currentSlide >= totalSlides){
+currentSlide = 0;
+}
+
+if(currentSlide < 0){
+currentSlide = totalSlides - 1;
+}
+
+track.style.transform =
+"translateX(-" + (currentSlide * 100) + "%)";
 }
 
 setInterval(function(){
-    moveSlide(1);
+moveSlide(1);
 },4000);
   </script>
 </body>
