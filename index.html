@@ -3,13 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>TIMYC | Tivannah Innovations Youth Organization</title>
-
 <meta name="description" content="TIMYC is a youth-led organization in Choma, Zambia empowering youths through innovation, arts, anti-drug campaigns, GBV awareness, environmental projects and community development.">
 
 <link rel="icon" href="photo01.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 *{
 margin:0;
@@ -32,7 +31,7 @@ top:0;
 z-index:999;
 background:#000;
 padding:15px 20px;
-box-shadow:0 2px 10px rgba(0,0,0,0.5);
+box-shadow:0 2px 10px rgba(0,0,0,.5);
 }
 
 nav{
@@ -40,6 +39,7 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 flex-wrap:wrap;
+gap:15px;
 }
 
 .logo{
@@ -63,45 +63,38 @@ font-size:28px;
 
 nav ul{
 display:flex;
-list-style:none;
 flex-wrap:wrap;
+list-style:none;
+gap:14px;
 }
 
-nav ul li{
-margin:8px;
-}
-
-nav ul li a{
-text-decoration:none;
+nav a{
 color:#fff;
+text-decoration:none;
 font-weight:bold;
-transition:0.3s;
 }
 
-nav ul li a:hover{
+nav a:hover{
 color:#d4af37;
 }
 
 /* HERO */
 .hero{
-height:100vh;
+min-height:100vh;
 background:url('photo02.jpg') center/cover no-repeat;
 display:flex;
-justify-content:center;
 align-items:center;
+justify-content:center;
 text-align:center;
+padding:30px;
 position:relative;
-padding:20px;
 }
 
 .hero::before{
 content:'';
 position:absolute;
-top:0;
-left:0;
-right:0;
-bottom:0;
-background:rgba(0,0,0,0.65);
+inset:0;
+background:rgba(0,0,0,.65);
 }
 
 .hero-content{
@@ -113,41 +106,38 @@ max-width:900px;
 .hero h1{
 font-size:60px;
 color:#d4af37;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
 .hero p{
-font-size:24px;
-margin-bottom:30px;
+font-size:22px;
+margin-bottom:25px;
 }
 
 .buttons{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-gap:15px;
-margin-top:30px;
+gap:14px;
 }
 
 .buttons a{
 background:#d4af37;
 color:#000;
-padding:14px;
-border-radius:35px;
+padding:13px;
+border-radius:30px;
 text-decoration:none;
 font-weight:bold;
-transition:0.3s;
 }
 
 .buttons a:hover{
 background:#fff;
-transform:translateY(-3px);
 }
 
-/* SECTION */
+/* GENERAL */
 section{
-padding:70px 20px;
 max-width:1200px;
 margin:auto;
+padding:70px 20px;
 }
 
 h2{
@@ -159,36 +149,82 @@ color:#d4af37;
 
 .card{
 background:#111;
-padding:28px;
+padding:25px;
 border-radius:15px;
 margin-bottom:20px;
-box-shadow:0 0 10px rgba(212,175,55,0.08);
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
-.gallery{
+/* STATS */
+.stats-section{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:18px;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+padding:50px 20px;
+max-width:1200px;
+margin:auto;
 }
 
-.gallery img{
-width:100%;
-height:260px;
-object-fit:cover;
+.stat-card{
+background:#111;
+padding:25px;
+border-radius:16px;
+text-align:center;
+}
+
+.stat-card h2{
+font-size:38px;
+margin-bottom:8px;
+}
+
+/* GALLERY */
+.gallery-container{
+position:relative;
+overflow:hidden;
 border-radius:15px;
-transition:0.4s;
+background:#111;
 }
 
-.gallery img:hover{
-transform:scale(1.05);
+.gallery-track{
+display:flex;
+transition:0.6s ease;
 }
 
+.gallery-track img{
+width:100%;
+flex:0 0 100%;
+height:420px;
+object-fit:contain;
+background:#111;
+}
+
+.nav-btn{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,.6);
+color:#fff;
+border:none;
+font-size:30px;
+padding:10px 16px;
+cursor:pointer;
+border-radius:8px;
+z-index:2;
+}
+
+.prev{left:10px;}
+.next{right:10px;}
+
+.nav-btn:hover{
+background:#25D366;
+}
+
+/* TEAM */
 .team{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -204,21 +240,21 @@ text-align:center;
 
 .member img{
 width:100%;
-height:250px;
+height:260px;
 object-fit:cover;
+object-position:top;
 border-radius:12px;
 }
 
 .member h3{
-margin-top:12px;
+margin-top:10px;
 }
 
 .member p{
 color:#d4af37;
-font-weight:bold;
 }
 
-/* VIDEO */
+/* VIDEOS */
 .videos{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
@@ -232,25 +268,53 @@ border-radius:15px;
 }
 
 .video-box p{
-margin-top:10px;
 text-align:center;
-font-weight:bold;
+margin-top:10px;
 color:#d4af37;
+font-weight:bold;
 }
 
 /* CONTACT */
 .contact p{
 margin:10px 0;
-font-size:18px;
 }
 
 /* FOOTER */
-footer{
-background:#000;
-text-align:center;
-padding:25px;
-color:#888;
+.footer{
+background:#111;
 margin-top:40px;
+padding:40px 20px 20px;
+}
+
+.footer-container{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.footer-box h3,
+.footer-box h2{
+color:#d4af37;
+margin-bottom:15px;
+}
+
+.footer-box a{
+display:block;
+color:#fff;
+text-decoration:none;
+margin:8px 0;
+}
+
+.footer-box a:hover{
+color:#d4af37;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:25px;
+color:#999;
 }
 
 /* WHATSAPP */
@@ -260,8 +324,8 @@ right:20px;
 bottom:20px;
 background:#25D366;
 color:#fff;
-padding:14px 24px;
-border-radius:40px;
+padding:14px 22px;
+border-radius:35px;
 text-decoration:none;
 font-weight:bold;
 z-index:999;
@@ -269,116 +333,10 @@ z-index:999;
 
 /* MOBILE */
 @media(max-width:768px){
-
-.hero h1{
-font-size:42px;
+.hero h1{font-size:42px;}
+.hero p{font-size:18px;}
+nav{flex-direction:column;}
 }
-
-.hero p{
-font-size:20px;
-}
-
-nav{
-flex-direction:column;
-}
-
-}
-  .profile-btn{
-background: linear-gradient(45deg,#d4af37,#ffd700);
-color:#000 !important;
-font-weight:600;
-border-radius:30px;
-padding:10px 18px;
-box-shadow:0 4px 12px rgba(0,0,0,0.2);
-transition:0.3s ease;
-}
-
-.profile-btn:hover{
-transform:translateY(-2px);
-box-shadow:0 8px 18px rgba(0,0,0,0.25);
-  }
-  .stats-section{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
-padding:50px 20px;
-background:#0a0a0a;
-}
-
-.stat-card{
-background:#111;
-padding:25px;
-border-radius:18px;
-text-align:center;
-box-shadow:0 8px 20px rgba(0,0,0,.3);
-border:1px solid rgba(255,215,0,.15);
-}
-
-.stat-card h2{
-font-size:38px;
-color:#ffd700;
-margin-bottom:10px;
-font-weight:700;
-}
-
-.stat-card p{
-font-size:16px;
-color:#fff;
-margin:0;
-}
-.gallery-slider{
-position:relative;
-width:100%;
-overflow:hidden;
-border-radius:15px;
-margin-top:20px;
-}
-
-.slides{
-display:flex;
-transition:0.6s ease;
-}
-
-.gallery-container{
-position:relative;
-overflow:hidden;
-border-radius:15px;
-margin-top:20px;
-}
-
-.gallery-track{
-display:flex;
-transition:0.6s ease;
-}
-
-.gallery-track img{
-width:100%;
-height:420px;
-object-fit:contain;
-background:#111;
-flex:0 0 100%;
-}
-
-.nav-btn{
-position:absolute;
-top:50%;
-transform:translateY(-50%);
-background:rgba(0,0,0,0.6);
-color:#fff;
-border:none;
-font-size:30px;
-padding:10px 16px;
-cursor:pointer;
-z-index:5;
-border-radius:8px;
-}
-
-.prev{left:10px;}
-.next{right:10px;}
-
-.nav-btn:hover{
-background:#25D366;
-  }
 </style>
 </head>
 
@@ -407,13 +365,12 @@ background:#25D366;
 
 <!-- HOME -->
 <section class="hero" id="home">
-
 <div class="hero-content">
 
 <h1>TIMYC</h1>
 
 <p>
-Tivannah Innovations Youth Organization empowering youths through leadership, innovation, arts and positive community action.
+Tivannah Innovations Youth Organization empowering youths through leadership, innovation, arts and community action.
 </p>
 
 <div class="buttons">
@@ -424,53 +381,33 @@ Tivannah Innovations Youth Organization empowering youths through leadership, in
 <a href="#team">Leadership</a>
 <a href="#video">Videos</a>
 <a href="#contact">Contact</a>
-<a href="TIMYC%20PROFILE%202026.pdf" target="_blank" class="profile-btn">
-Download Profile
-</a>
+<a href="TIMYC%20PROFILE%202026.pdf" target="_blank">Download Profile</a>
+</div>
 
 </div>
 </section>
+
+<!-- STATS -->
 <section class="stats-section">
-  <div class="stat-card">
-    <h2>150+</h2>
-    <p>Youths Empowered</p>
-  </div>
-
-  <div class="stat-card">
-    <h2>9</h2>
-    <p>Projects Completed</p>
-  </div>
-
-  <div class="stat-card">
-    <h2>35+</h2>
-    <p>Volunteers</p>
-  </div>
-
-  <div class="stat-card">
-    <h2>5+</h2>
-    <p>Communities Reached</p>
-  </div>
+<div class="stat-card"><h2>150+</h2><p>Youths Empowered</p></div>
+<div class="stat-card"><h2>9</h2><p>Projects Completed</p></div>
+<div class="stat-card"><h2>35+</h2><p>Volunteers</p></div>
+<div class="stat-card"><h2>5+</h2><p>Communities Reached</p></div>
 </section>
+
 <!-- ABOUT -->
 <section id="about">
-
 <h2>About TIMYC</h2>
 
 <div class="card">
-<p>
-Founded in 2021 in Choma, Zambia, TIMYC is a youth-led organization committed to empowering young people through arts, leadership, innovation, environmental action and social change.
-</p>
+<p>Founded in 2021 in Choma, Zambia, TIMYC is a youth-led organization committed to empowering young people through arts, leadership, innovation, environmental action and social change.</p>
 <br>
-<p>
-We stand against drug abuse, gender based violence, early marriages and unemployment while promoting talent, entrepreneurship and hope.
-</p>
+<p>We stand against drug abuse, gender based violence, early marriages and unemployment while promoting talent, entrepreneurship and hope.</p>
 </div>
-
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
-
 <h2>Our Projects</h2>
 
 <div class="grid">
@@ -487,14 +424,12 @@ We stand against drug abuse, gender based violence, early marriages and unemploy
 
 <div class="card">
 <h3>🤝 Carelift Foundation</h3>
-<p>
-A community impact project under TIMYC dedicated to supporting vulnerable children, youths and families through education support, empowerment and humanitarian outreach.
-</p>
+<p>Supporting vulnerable children, youths and families.</p>
 </div>
-  
+
 <div class="card">
 <h3>🚫 Drug Abuse Awareness</h3>
-<p>Helping youths reject harmful substances and choose success.</p>
+<p>Helping youths reject harmful substances.</p>
 </div>
 
 <div class="card">
@@ -508,269 +443,32 @@ A community impact project under TIMYC dedicated to supporting vulnerable childr
 </div>
 
 </div>
+</section>
 
-  <section id="support">
-
-<h2>Partners, Supporters & Donations</h2>
+<!-- SUPPORT -->
+<section id="support">
+<h2>Support TIMYC</h2>
 
 <div class="card">
-<p>
-TIMYC sincerely appreciates the organizations and individuals whose support contributed to the successful launch of our movie <b>Bride Price</b> and the continued growth of youth empowerment, arts and innovation.
-</p>
+<p>Your support helps empower youths through innovation, film, leadership and outreach programs.</p>
 </div>
 
-<!-- APPRECIATION -->
 <div class="grid">
-
 <div class="card">
-<h3>🏢 Organizations</h3>
-<p>Nanaz Lodge</p>
-<p>Chakwana Foundation</p>
-<p>Nichtech College</p>
-<p>Plova Innovations</p>
-<p>Saved Through Art</p>
-<p>YHIMA</p>
+<h3>📱 MTN Money</h3>
+<p>TIVANNAH INNOVATIONS</p>
+<p>+260762530372</p>
 </div>
 
 <div class="card">
-<h3>👤 Special Individuals</h3>
-<p>Hon. Lungowe Sikwibele</p>
-<p>Mr. Mweemba Honest</p>
-</div>
-
-</div>
-
-<!-- SUPPORT / DONATION SECTION -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<section id="support" style="
-padding:70px 20px;
-background:linear-gradient(135deg,#0b3d2e,#145a32,#1d8348);
-color:white;
-font-family:'Poppins',sans-serif;
-">
-
-<div style="max-width:1200px; margin:auto; text-align:center;">
-
-<h2 style="
-font-size:42px;
-margin-bottom:12px;
-color:#FFD700;
-font-weight:700;
-">
-Support Our Mission
-</h2>
-
-<p style="
-font-size:18px;
-max-width:760px;
-margin:auto;
-line-height:1.8;
-font-weight:300;
-">
-Help Tivannah Innovations Youth Club empower youths through film production,
-leadership development, innovation, entrepreneurship and community outreach.
-</p>
-
-<!-- CARDS -->
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-margin-top:45px;
-">
-
-<!-- CARD 1 -->
-<div onclick="openSupport()" style="
-background:white;
-color:#222;
-padding:30px;
-border-radius:18px;
-cursor:pointer;
-box-shadow:0 10px 25px rgba(0,0,0,0.25);
-">
-<div style="font-size:46px;">🤝</div>
-<h3 style="margin-top:15px;">Partner With TIMYC</h3>
-<p style="margin-top:10px;">Support youth programs and projects.</p>
-</div>
-
-<!-- CARD 2 -->
-<div onclick="openSupport()" style="
-background:white;
-color:#222;
-padding:30px;
-border-radius:18px;
-cursor:pointer;
-box-shadow:0 10px 25px rgba(0,0,0,0.25);
-">
-<div style="font-size:46px;">🎬</div>
-<h3 style="margin-top:15px;">Sponsor Initiative</h3>
-<p style="margin-top:10px;">Help fund films, training and outreach.</p>
-</div>
-
-<!-- CARD 3 -->
-<div onclick="openSupport()" style="
-background:white;
-color:#222;
-padding:30px;
-border-radius:18px;
-cursor:pointer;
-box-shadow:0 10px 25px rgba(0,0,0,0.25);
-">
-<div style="font-size:46px;">💚</div>
-<h3 style="margin-top:15px;">Make Contribution</h3>
-<p style="margin-top:10px;">Every support creates impact.</p>
-</div>
-
+<h3>🏦 ZANACO Bank</h3>
+<p>TIVANNAH INNOVATIONS</p>
+<p>6336226500179</p>
 </div>
 </div>
+
 </section>
 
-<!-- POPUP -->
-<div id="supportPopup" style="
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.75);
-z-index:9999;
-font-family:'Poppins',sans-serif;
-">
-
-<div style="
-background:white;
-width:92%;
-max-width:560px;
-margin:70px auto;
-padding:30px;
-border-radius:18px;
-text-align:center;
-position:relative;
-color:#222;
-box-shadow:0 15px 40px rgba(0,0,0,0.25);
-">
-
-<!-- CLOSE -->
-<span onclick="closeSupport()" style="
-position:absolute;
-top:12px;
-right:18px;
-font-size:30px;
-cursor:pointer;
-font-weight:bold;
-color:#999;
-">×</span>
-
-<h2 style="
-color:#0b3d2e;
-margin-bottom:8px;
-font-size:30px;
-font-weight:700;
-">
-Support TIMYC
-</h2>
-
-<p style="
-font-size:15px;
-line-height:1.7;
-color:#555;
-margin-bottom:22px;
-">
-Your support helps us empower youths through innovation, media, leadership and outreach programs.
-</p>
-
-<!-- INLINE ACCOUNTS -->
-<div style="
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:18px;
-text-align:left;
-margin-bottom:18px;
-">
-
-<!-- MTN -->
-<div style="
-background:#f7f7f7;
-padding:18px;
-border-radius:14px;
-">
-<h3 style="font-size:16px; margin-bottom:10px; color:#0b3d2e;">📱 MTN Money</h3>
-<p style="font-size:14px; line-height:1.6;">
-TIVANNAH INNOVATIONS<br>
-+260762530372
-</p>
-</div>
-
-<!-- BANK -->
-<div style="
-background:#f7f7f7;
-padding:18px;
-border-radius:14px;
-">
-<h3 style="font-size:16px; margin-bottom:10px; color:#0b3d2e;">🏦 ZANACO Bank</h3>
-<p style="font-size:14px; line-height:1.6;">
-TIVANNAH INNOVATIONS<br>
-6336226500179
-</p>
-</div>
-
-</div>
-
-<!-- CONTACT -->
-<div style="
-background:#fafafa;
-padding:16px;
-border-radius:14px;
-margin-bottom:18px;
-font-size:14px;
-line-height:1.8;
-color:#444;
-">
-
-📧 timyc095@gmail.com<br>
-🌍 https://tivannahorg.github.io/timyc/
-
-</div>
-
-<!-- WHATSAPP -->
-<a href="https://wa.me/260971453747" target="_blank" style="
-display:inline-block;
-background:#25D366;
-color:white;
-padding:13px 28px;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-font-size:15px;
-box-shadow:0 8px 18px rgba(37,211,102,0.25);
-">
-Chat on WhatsApp
-</a>
-
-<p style="
-margin-top:18px;
-font-size:13px;
-color:#0b3d2e;
-font-weight:600;
-">
-Together we inspire, innovate & impact.
-</p>
-
-</div>
-</div>
-
-<script>
-function openSupport(){
-document.getElementById("supportPopup").style.display="block";
-}
-
-function closeSupport(){
-document.getElementById("supportPopup").style.display="none";
-}
-  
-</section>
 <!-- GALLERY -->
 <section id="gallery">
 
@@ -781,13 +479,11 @@ document.getElementById("supportPopup").style.display="none";
 <button class="nav-btn prev" onclick="moveSlide(-1)">❮</button>
 
 <div class="gallery-track" id="galleryTrack">
-
 <img src="photo02.jpg">
 <img src="photo03.jpg">
 <img src="photo04.jpg">
 <img src="photo05.jpg">
 <img src="photo06.jpg">
-
 </div>
 
 <button class="nav-btn next" onclick="moveSlide(1)">❯</button>
@@ -796,29 +492,8 @@ document.getElementById("supportPopup").style.display="none";
 
 </section>
 
-<script>
-let currentSlide = 0;
-
-function moveSlide(step){
-const track = document.getElementById("galleryTrack");
-if(!track) return;
-
-const slides = track.children.length;
-
-currentSlide += step;
-
-if(currentSlide >= slides) currentSlide = 0;
-if(currentSlide < 0) currentSlide = slides - 1;
-
-track.style.transform =
-"translateX(-" + (currentSlide * 100) + "%)";
-}
-
-setInterval(function(){
-moveSlide(1);
-},4000);
-</script>
-
+<!-- TEAM -->
+<section id="team">
 <h2>Leadership Team</h2>
 
 <div class="team">
@@ -830,13 +505,13 @@ moveSlide(1);
 </div>
 
 <div class="member">
-<img src="Alice Mweetwa.jpg" style="width:100%; height:260px; object-fit:cover; object-position:top center; border-radius:12px;">
+<img src="Alice Mweetwa.jpg">
 <h3>Alice Mweetwa</h3>
 <p>Secretary</p>
 </div>
 
 <div class="member">
-<img src="james moonga.jpg" style="width:100%; height:260px; object-fit:cover; object-position:top center; border-radius:12px;">
+<img src="james moonga.jpg">
 <h3>Moonga James</h3>
 <p>Treasurer</p>
 </div>
@@ -848,167 +523,107 @@ moveSlide(1);
 </div>
 
 <div class="member">
-<img src="Paul Mwaanga.png" style="object-fit:cover; object-position:top center;">
+<img src="Paul Mwaanga.png">
 <h3>Paul Mwaanga</h3>
 <p>Programmes Manager</p>
 </div>
 
 </div>
-
-</section>
-
-</div>
-
 </section>
 
 <!-- VIDEOS -->
 <section id="video">
-
 <h2>Watch Our Productions</h2>
 
 <div class="videos">
 
 <div class="video-box">
-<iframe width="100%" height="220"
-src="https://www.youtube.com/embed/i8Ap0iQml64"
-frameborder="0" allowfullscreen
-style="border-radius:12px;"></iframe>
+<iframe width="100%" height="220" src="https://www.youtube.com/embed/i8Ap0iQml64" style="border-radius:12px;" allowfullscreen></iframe>
 <p>Bride Price</p>
 </div>
 
 <div class="video-box">
-<iframe width="100%" height="220"
-src="https://www.youtube.com/embed/C1B-Pki3isM"
-frameborder="0" allowfullscreen
-style="border-radius:12px;"></iframe>
+<iframe width="100%" height="220" src="https://www.youtube.com/embed/C1B-Pki3isM" style="border-radius:12px;" allowfullscreen></iframe>
 <p>The Voiceless</p>
 </div>
 
 <div class="video-box">
-<iframe width="100%" height="220"
-src="https://www.youtube.com/embed/QU7o0S_xnT4"
-frameborder="0" allowfullscreen
-style="border-radius:12px;"></iframe>
+<iframe width="100%" height="220" src="https://www.youtube.com/embed/QU7o0S_xnT4" style="border-radius:12px;" allowfullscreen></iframe>
 <p>Mwelwa</p>
 </div>
 
 </div>
-
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-
 <h2>Contact Us</h2>
 
 <div class="card contact">
-
 <p><b>Phone:</b> +260971453747</p>
-<p><b>WhatsApp:</b> +260971453747</p>
 <p><b>Email:</b> timyc095@gmail.com</p>
 <p><b>Location:</b> Choma, Zambia</p>
+</div>
+</section>
 
-<p>
-<a href="https://www.facebook.com/profile.php?id=100072132632565" target="_blank" style="color:#d4af37;text-decoration:none;font-weight:bold;">
-Visit Our Facebook Page
-</a>
-</p>
+<!-- FOOTER -->
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-box">
+<h2>TIMYC</h2>
+<p>Empowering youths through innovation, leadership, arts and community impact.</p>
+</div>
+
+<div class="footer-box">
+<h3>Quick Links</h3>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</div>
+
+<div class="footer-box">
+<h3>Connect With Us</h3>
+
+<a href="https://www.facebook.com/profile.php?id=100072132632565" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+
+<a href="https://youtube.com/@tivannahinnovationsmedia" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+
+<a href="https://tiktok.com/@tivannahinnovations" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+
+<p>📞 0971453747</p>
+<p>📧 timyc095@gmail.com</p>
+<p>🌍 tivannahorg.github.io/timyc</p>
 
 </div>
 
-</section>
+</div>
 
-<footer>
-© 2026 TIMYC | Tivannah Innovations Youth Organization | All Rights Reserved
+<div class="footer-bottom">
+© 2026 TIMYC | Tivannah Innovations Youth Organization
+</div>
+
 </footer>
 
 <a class="whatsapp" href="https://wa.me/260971453747">WhatsApp</a>
+
 <script>
-const counters = document.querySelectorAll('.stat-card h2');
-
-counters.forEach(counter => {
-let target = counter.innerText.replace('+','');
-let count = 0;
-
-const updateCounter = () => {
-const speed = target / 60;
-count += speed;
-
-if(count < target){
-counter.innerText = Math.ceil(count) + (counter.innerText.includes('+') ? '+' : '');
-setTimeout(updateCounter, 30);
-}else{
-counter.innerText = target + (counter.innerText.includes('+') ? '+' : '');
-}
-};
-
-updateCounter();
-});
-</script>
-  <footer class="footer">
-  <div class="footer-container">
-
-    <div class="footer-box">
-      <h2>TIMYC</h2>
-      <p>Empowering youths through innovation, leadership, arts and community impact.</p>
-    </div>
-
-    <div class="footer-box">
-      <h3>Quick Links</h3>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-    </div>
-
-    <div class="footer-box">
-<h3>Connect With Us</h3>
-
-<a href="https://www.facebook.com/profile.php?id=100072132632565" target="_blank">
-<i class="fab fa-facebook"></i> Facebook
-</a>
-
-<a href="https://youtube.com/@tivannahinnovationsmedia?si=pmJRlYtxyF1p0jNh" target="_blank">
-<i class="fab fa-youtube"></i> YouTube
-</a>
-
-<a href="https://tiktok.com/@tivannahinnovations" target="_blank">
-<i class="fab fa-tiktok"></i> TikTok
-</a>
-
-<p style="margin-top:15px;">📞 0971453747</p>
-<p>📧 timyc095@gmail.com</p>
-<p>🌍 tivannahorg.github.io/timyc</p>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    © 2026 TIMYC | Tivannah Innovations Youth Organization
-  </div>
-  </footer>
-  <script>
+/* GALLERY */
 let currentSlide = 0;
 
 function moveSlide(step){
-
 const track = document.getElementById("galleryTrack");
+if(!track) return;
 
-if (!track) return;
+const totalSlides = track.children.length;
 
-const slides = track.querySelectorAll("img");
-const totalSlides = slides.length;
+currentSlide += step;
 
-currentSlide = currentSlide + step;
-
-if(currentSlide >= totalSlides){
-currentSlide = 0;
-}
-
-if(currentSlide < 0){
-currentSlide = totalSlides - 1;
-}
+if(currentSlide >= totalSlides) currentSlide = 0;
+if(currentSlide < 0) currentSlide = totalSlides - 1;
 
 track.style.transform =
 "translateX(-" + (currentSlide * 100) + "%)";
@@ -1017,6 +632,28 @@ track.style.transform =
 setInterval(function(){
 moveSlide(1);
 },4000);
-  </script>
+
+/* COUNTERS */
+const counters = document.querySelectorAll('.stat-card h2');
+
+counters.forEach(counter=>{
+let target = parseInt(counter.innerText);
+let count = 0;
+
+function update(){
+count += Math.ceil(target/60);
+
+if(count < target){
+counter.innerText = count + (counter.textContent.includes('+') ? '+' : '');
+setTimeout(update,30);
+}else{
+counter.innerText = target + (counter.textContent.includes('+') ? '+' : '');
+}
+}
+
+update();
+});
+</script>
+
 </body>
-  </html>
+</html>
