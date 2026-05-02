@@ -323,7 +323,7 @@ Tivannah Innovations Youth Organization empowering youths through leadership, in
 <div class="buttons">
 <a href="#about">About Us</a>
 <a href="#projects">Projects</a>
-  <li><a href="#support">Support</a></li>
+<li><a href="#support">Support</a></li>
 <a href="#gallery">Gallery</a>
 <a href="#team">Leadership</a>
 <a href="#video">Videos</a>
@@ -422,36 +422,108 @@ TIMYC sincerely appreciates the organizations and individuals whose support cont
 
 </div>
 
-<!-- DONATION -->
-<div class="card">
-<h3>Support TIMYC</h3>
-<p>
-Your contribution helps us continue youth programs, film production, leadership development, anti-drug campaigns and community outreach.
+<!-- SUPPORT / DONATION SECTION -->
+<section id="support" style="padding:70px 20px; background:linear-gradient(135deg,#0b3d2e,#145a32,#1d8348); color:white; font-family:Arial, sans-serif;">
+
+<div style="max-width:1200px; margin:auto; text-align:center;">
+
+<h2 style="font-size:42px; margin-bottom:12px; color:#FFD700;">
+Support Our Mission
+</h2>
+
+<p style="font-size:18px; max-width:760px; margin:auto; line-height:1.8;">
+Help Tivannah Innovations Youth Club empower youths through film production,
+leadership development, innovation, entrepreneurship, and community outreach.
 </p>
+
+<!-- SUPPORT CARDS -->
+<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:25px; margin-top:45px;">
+
+<!-- CARD 1 -->
+<div onclick="openSupport()" style="background:white; color:#222; padding:30px; border-radius:18px; cursor:pointer; box-shadow:0 10px 25px rgba(0,0,0,0.25); transition:0.3s;">
+<div style="font-size:46px;">🤝</div>
+<h3 style="margin-top:15px;">Partner With TIMYC</h3>
+<p style="margin-top:10px;">Support youth programs, outreach and growth projects.</p>
 </div>
 
-<div class="grid">
-
-<div class="card">
-<h3>🏦 Bank Transfer</h3>
-<p><b>Bank:</b> ZANACO</p>
-<p><b>Account Name:</b> TIVANNAH INNOVATIONS</p>
-<p><b>Account Number:</b> 6336226500179</p>
+<!-- CARD 2 -->
+<div onclick="openSupport()" style="background:white; color:#222; padding:30px; border-radius:18px; cursor:pointer; box-shadow:0 10px 25px rgba(0,0,0,0.25); transition:0.3s;">
+<div style="font-size:46px;">🎬</div>
+<h3 style="margin-top:15px;">Sponsor An Initiative</h3>
+<p style="margin-top:10px;">Help fund movies, training and creative activities.</p>
 </div>
 
-<div class="card">
-<h3>📱 MTN Mobile Money</h3>
-<p><b>Name:</b> TIVANNAH INNOVATIONS</p>
-<p><b>Number:</b> +260762530372</p>
+<!-- CARD 3 -->
+<div onclick="openSupport()" style="background:white; color:#222; padding:30px; border-radius:18px; cursor:pointer; box-shadow:0 10px 25px rgba(0,0,0,0.25); transition:0.3s;">
+<div style="font-size:46px;">💚</div>
+<h3 style="margin-top:15px;">Make A Contribution</h3>
+<p style="margin-top:10px;">Every contribution creates impact in young lives.</p>
 </div>
 
 </div>
+</div>
+</section>
 
-<div style="text-align:center; margin-top:25px;">
-<a href="https://wa.me/260971453747" class="btn" target="_blank">Become A Supporter</a>
+<!-- POPUP -->
+<div id="supportPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.75); z-index:9999;">
+
+<div style="background:white; width:92%; max-width:520px; margin:60px auto; padding:35px; border-radius:18px; text-align:center; position:relative; color:#222;">
+
+<span onclick="closeSupport()" style="position:absolute; top:12px; right:18px; font-size:30px; cursor:pointer;">×</span>
+
+<h2 style="color:#0b3d2e; margin-bottom:10px;">Support TIMYC</h2>
+
+<p style="line-height:1.7;">
+Thank you for supporting youth empowerment, innovation and community transformation.
+</p>
+
+<hr style="margin:20px 0;">
+
+<p>
+<strong>📱 MTN Mobile Money</strong><br>
+TIVANNAH INNOVATIONS<br>
++260762530372
+</p>
+
+<p>
+<strong>🏦 ZANACO Bank</strong><br>
+Account Name: TIVANNAH INNOVATIONS<br>
+Account Number: 6336226500179
+</p>
+
+<p>
+<strong>📧 Email</strong><br>
+timyc095@gmail.com
+</p>
+
+<p>
+<strong>🌍 Website</strong><br>
+<a href="https://tivannahorg.github.io/timyc/" target="_blank">
+tivannahorg.github.io/timyc
+</a>
+</p>
+
+<p>
+<strong>📞 WhatsApp / Calls</strong><br>
+0971453747
+</p>
+
+<p style="margin-top:20px; color:green; font-weight:bold;">
+Together we inspire, innovate & impact.
+</p>
+
+</div>
 </div>
 
-  </section>
+<script>
+function openSupport(){
+document.getElementById("supportPopup").style.display="block";
+}
+
+function closeSupport(){
+document.getElementById("supportPopup").style.display="none";
+}
+</script>
   
 </section>
 
