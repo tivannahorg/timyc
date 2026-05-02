@@ -297,6 +297,35 @@ transition:0.3s ease;
 transform:translateY(-2px);
 box-shadow:0 8px 18px rgba(0,0,0,0.25);
   }
+  .stats-section{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+padding:50px 20px;
+background:#0a0a0a;
+}
+
+.stat-card{
+background:#111;
+padding:25px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,.3);
+border:1px solid rgba(255,215,0,.15);
+}
+
+.stat-card h2{
+font-size:38px;
+color:#ffd700;
+margin-bottom:10px;
+font-weight:700;
+}
+
+.stat-card p{
+font-size:16px;
+color:#fff;
+margin:0;
+}
 </style>
 </head>
 
@@ -348,7 +377,27 @@ Download Profile
 
 </div>
 </section>
+<section class="stats-section">
+  <div class="stat-card">
+    <h2>150+</h2>
+    <p>Youths Empowered</p>
+  </div>
 
+  <div class="stat-card">
+    <h2>9</h2>
+    <p>Projects Completed</p>
+  </div>
+
+  <div class="stat-card">
+    <h2>35+</h2>
+    <p>Volunteers</p>
+  </div>
+
+  <div class="stat-card">
+    <h2>5+</h2>
+    <p>Communities Reached</p>
+  </div>
+</section>
 <!-- ABOUT -->
 <section id="about">
 
