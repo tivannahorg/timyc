@@ -839,6 +839,27 @@ Visit Our Facebook Page
 </footer>
 
 <a class="whatsapp" href="https://wa.me/260971453747">WhatsApp</a>
+<script>
+const counters = document.querySelectorAll('.stat-card h2');
 
+counters.forEach(counter => {
+let target = counter.innerText.replace('+','');
+let count = 0;
+
+const updateCounter = () => {
+const speed = target / 60;
+count += speed;
+
+if(count < target){
+counter.innerText = Math.ceil(count) + (counter.innerText.includes('+') ? '+' : '');
+setTimeout(updateCounter, 30);
+}else{
+counter.innerText = target + (counter.innerText.includes('+') ? '+' : '');
+}
+};
+
+updateCounter();
+});
+</script>
 </body>
   </html>
