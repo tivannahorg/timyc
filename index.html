@@ -1056,5 +1056,31 @@ updateCounter();
     © 2026 TIMYC | Tivannah Innovations Youth Organization
   </div>
   </footer>
+  <script>
+let currentSlide = 0;
+const galleryTrack = document.getElementById("galleryTrack");
+
+function moveSlide(step){
+    const slides = galleryTrack.querySelectorAll("img");
+    const totalSlides = slides.length;
+
+    currentSlide += step;
+
+    if(currentSlide >= totalSlides){
+        currentSlide = 0;
+    }
+
+    if(currentSlide < 0){
+        currentSlide = totalSlides - 1;
+    }
+
+    galleryTrack.style.transform =
+    "translateX(-" + (currentSlide * 100) + "%)";
+}
+
+setInterval(function(){
+    moveSlide(1);
+},4000);
+  </script>
 </body>
   </html>
