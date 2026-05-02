@@ -326,6 +326,44 @@ font-size:16px;
 color:#fff;
 margin:0;
 }
+  .gallery-slider{
+width:100%;
+overflow:hidden;
+border-radius:15px;
+margin-top:20px;
+}
+
+.slides{
+display:flex;
+width:500%;
+animation:slideGallery 20s infinite;
+}
+
+.slides img{
+width:100%;
+max-height:450px;
+object-fit:cover;
+flex:1 0 100%;
+}
+
+@keyframes slideGallery{
+0%{transform:translateX(0);}
+18%{transform:translateX(0);}
+
+20%{transform:translateX(-100%);}
+38%{transform:translateX(-100%);}
+
+40%{transform:translateX(-200%);}
+58%{transform:translateX(-200%);}
+
+60%{transform:translateX(-300%);}
+78%{transform:translateX(-300%);}
+
+80%{transform:translateX(-400%);}
+98%{transform:translateX(-400%);}
+
+100%{transform:translateX(0);}
+}
 </style>
 </head>
 
@@ -725,12 +763,14 @@ document.getElementById("supportPopup").style.display="none";
 
 <h2>Our Gallery</h2>
 
-<div class="gallery">
+<div class="gallery-slider">
+<div class="slides">
 <img src="photo02.jpg">
 <img src="photo03.jpg">
 <img src="photo04.jpg">
 <img src="photo05.jpg">
 <img src="photo06.jpg">
+</div>
 </div>
 
 <section id="team">
